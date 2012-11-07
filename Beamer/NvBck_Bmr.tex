@@ -65,7 +65,6 @@
 \usepackage{expdlist}
 \usepackage{tikz}
 
-
 \xdefinecolor{darkgreen}{rgb}{0,0.35,0}
 \definecolor{wdgRed}{rgb}{.6,0,0}
 
@@ -151,7 +150,7 @@
 % - Keep it simple, no one is interested in your street address.
 
 \date[\today] % (optional, should be abbreviation of conference name)
-{Talk Presented at UCL on 2012-03Mar-07}
+{Talk Presented at MPIB ABC on 2012-03Mar-27}
 % - Either use conference name or its abbreviation.
 % - Not really informative to the audience, more for people (including yourself) who are reading the slides online
 
@@ -220,45 +219,6 @@ Cognitive workload is a Pasteur's Quadrant \parencite{stokes97} type of problem:
 
 \end{frame}
 
-\begin{frame}
-	\frametitle{BUT FIRST\dots}
-	\begin{itemize}
-		\item The talk I might have given yesterday but did not\dots
-	\end{itemize}
-		\begin{center}
-		\includegraphics[width=.75\textwidth]{../zNvBkFigs/fig4-SL}
-	\end{center}
-\end{frame}
-
-\begin{frame}
-	\frametitle{BUT FIRST\dots}
-	\begin{itemize}
-		\item The talk I might have given yesterday but did not\dots
-	\end{itemize}
-		\begin{center}
-		\includegraphics[width=.75\textwidth]{../zNvBkFigs/fig4-SL}
-	\end{center}
-	\begin{textblock}{3}(5.5,7)	
-  		\includegraphics[width=.75\textwidth]{../zNvBkFigs/fig5-SLhist}
-    	   \end{textblock}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{THE CHALLENGE}
-Solving this problem will not be business-as-usual for the cognitive research community
-	\begin{itemize}
-			\item The scope of the problem may result in a different approach to theory development than many cognitive scientists favor
-			\item A broader consideration of the interactions among cognition, perception, and action is required
-			\begin{itemize}
-				\item Echoes the distinction made by EPIC, ``to give the perceptual and motor mechanisms equal status with cognition in accounting for human performance,'' \nptextcite{km97}
-			\end{itemize}
-			\pause
-			\item A broader take on modeling is required as well. The need to model entire tasks, not just the bits that are simple to model \parencite{erik08pr.article,newell73chptr}
-		\end{itemize}
-
-\end{frame}
-
  \begin{frame}
 	\frametitle{WHY COGNITIVE WORKLOAD IS IMPORTANT}
 	The need for theory-based applications:
@@ -269,6 +229,22 @@ Solving this problem will not be business-as-usual for the cognitive research co
 	\end{itemize}
 \end{frame}
 
+ \begin{frame}
+	\frametitle{IS COGNITIVE WORKLOAD AN IMPORTANT ISSUE FOR \emph{FAST \& FRUGAL?}}
+	?? Has there been work done on the robustness of Fast \& Frugal heuristics under\dots
+	\pause
+	\begin{itemize}
+		\item Changes in cognitive workload?
+		\item Conditions of physical fatigue?
+		\item Emotional distress?
+		\item Multitasking?
+		\item Interruptions?
+		\item Changes in the cost of information acquisition?
+		\item Sensitivity to changes in the design of interactive systems?
+	\end{itemize}
+\end{frame}
+
+
 %% Review and Critique
 \subsection{Review and Critique of Contemporary Theory of Workload}
 %% Review and Critique
@@ -276,11 +252,12 @@ Solving this problem will not be business-as-usual for the cognitive research co
 \begin{frame}[label=4flaws]
 	\frametitle{WORKLOAD, COGNITIVE WORKLOAD, \& COGNITIVE CONTROL}
 	Current approaches to workload used by the human factors community share one or more flaws:
-	\begin{enumerate}
+	\pause
+	\begin{enumerate}[<+-| alert@+>]
 		\item They offer an outcome-based not a process-based approach to workload
 		\item They treat workload as a single construct that applies over the full scope of human behavior
 		\item They do not distinguish between body-bound or brain-bound resource limits
-		\item They do mention cognitive control and they certainly do not distinguish between resources limits in control per se versus the role that control plays in selecting different \alert{microprocedures}\footnote[frame]{AKA \emph{interactive routines, microstrategies}} to accomplish a given task (as per \nptextcite{gray06pr}).
+		\item They do not mention cognitive control and they certainly do not distinguish between resources limits in control per se versus the role that control plays in selecting different \alert{microprocedures}\footnote[frame]{AKA \emph{interactive routines, microstrategies}} to accomplish a given task (as per \nptextcite{gray06pr}).
 	\end{enumerate}
 	\vspace{.7cm}
 \end{frame}
@@ -315,7 +292,7 @@ On the plus side they address the first two complaints; namely,
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}<beamer:0>
 	\frametitle{COGNITIVE APPROACHES}
 	The two best examples of cognitive approaches to workload are:
 	\begin{itemize}
@@ -333,10 +310,9 @@ On the plus side they address the first two complaints; namely,
 \pause
 Due to their domains, Wicken's MRT has had more to do with complex tasks involving a human operator physically interacting with external devices (e.g., Airline Pilots flying planes)
 
-
 \end{frame}
 
-\begin{frame}
+\begin{frame}<beamer:0>
 	\frametitle{MULTIPLE RESOURCE THEORY}
 	\begin{itemize}
 		\item Visual representation of Christopher Wicken's Multiple Resource Theory. Dual tasks are coded by which sections of the cube the tasks require. When more than one task requires the use of a given resource, the theory predicts a performance decrement.
@@ -346,7 +322,7 @@ Due to their domains, Wicken's MRT has had more to do with complex tasks involvi
 	\end{center}
 \end{frame}
 
-\begin{frame}
+\begin{frame}<beamer:0>
 	\frametitle{CRITIQUE OF MULTIPLE RESOURCE THEORY}
 On the plus side MRT addresses the first two complaints; namely,
 	\begin{enumerate}
@@ -358,6 +334,20 @@ On the plus side MRT addresses the first two complaints; namely,
 		\item It does not distinguish between resources limits in cognitive control versus the role that control resources play in strategically structuring and interleaving body-bound and other brain-bound resources.
 	\end{enumerate}
 \end{frame}
+
+\begin{frame}
+	\frametitle{CRITIQUE OF COGNITIVE APPROACHES TO WORKLOAD}
+On the plus side current cognitive approaches address the first two complaints; namely,
+	\begin{enumerate}
+		\item They offer an outcome-based not a process-based approach to workload
+		\item They treat to focus on events that happen with the unit task timeframe (though this focus is not explicit)
+	\pause
+  \listpart{However, they don't do as well on these:}  %%%courtesy of the expdlist package
+		\item Do not distinguish between body-bound or brain-bound resource limits
+		\item Do not distinguish between resources limits in cognitive control versus the role that control resources play in strategically structuring and interleaving body-bound and other brain-bound resources.
+	\end{enumerate}
+\end{frame}
+
 
 %% Our Approach
 \subsection{Our Approach}
@@ -415,7 +405,7 @@ Our approach:
 Our critique:
 	\begin{enumerate}
 		\setcounter{enumi}{3}
-		\item Current approaches do not distinguish between resources limits in cognitive control versus the role that control resources play in strategically structuring and interleaving body-bound and other brain-bound resources.
+		\item Current approaches do not distinguish between \textcolor{darkgreen}{resources limits} in cognitive control versus the role that \textcolor{wdgRed}{control resources play} in \textcolor{wdgRed}{strategically structuring and interleaving} other resources.
 	\end{enumerate}
 \pause
 Our approach: 
@@ -424,7 +414,7 @@ Our approach:
 		\item \alert{Milliseconds Matter!} We build on our prior work with the \emph{Soft Constraints Hypothesis} \parencite{gray06pr} which shows shifts in \emph{microprocedures} which reflect local optimization of effort
 	\end{enumerate}
 	\begin{itemize}
-			\item In the work presented today we will be open-minded about whether our data show \alert{resource limits} or \alert{shifts in microstrategies} due to local optimization of efficiencies - as per the \emph{soft constraints hypothesis}.
+			\item In the work presented today we will be open-minded about whether our data show \alert{resource limits} or \alert{shifts in microprocedures} due to local optimization of efficiencies - as per the \emph{soft constraints hypothesis}.
 		\end{itemize}
 
 \end{frame}
@@ -613,7 +603,7 @@ Our approach:
 		\item However, the details of the jitter data show the worse performance \emph{before} not \emph{after} the turn instruction is presented
 		\item This implies that the processing of the new instruction, including the updating of the n-back style list of 3 items does not differ by modality
 	\end{itemize}
-Is this evidence that the \emph{cognitive control} is itself resource bound? {Wouldn't seem too surprisely if so.} \onslide<2->Or does this reflect low-level strategic changes in the selection of microprocedures used in this task? \onslide<3->Or are there other options we have not considered?
+Is this evidence that the \emph{\textcolor{red}{cognitive control is itself resource bound?}} Wouldn't seem too surprisely if so. \onslide<2-> Or does this reflect \emph{\textcolor{wdgRed}{low-level strategic changes in the selection of microprocedures used in this task?}} \onslide<3->Or are there \emph{\textcolor{darkgreen}{other options}} we have not considered?
 \end{frame}
 
 
@@ -706,8 +696,14 @@ Is this evidence that the \emph{cognitive control} is itself resource bound? {Wo
 
 \end{frame}
 
+\begin{frame} 
+	\frametitle{E2 RESULTS: LoMem vs HiMem Differences in Fixations Dispersion}
+	  \begin{textblock}{5.5}(3,2)	
+  		\includegraphics[scale=.45]{../zNvBkFigs/Rplot_hexbinplot_db_hl}
+    	  \end{textblock} 
+\end{frame}
 
-%%% stopped here last night
+
 \begin{frame} 
 	\frametitle{MORE DISPERSED EYE FIXATIONS}
 	\begin{itemize}
@@ -719,6 +715,10 @@ Is this evidence that the \emph{cognitive control} is itself resource bound? {Wo
  	\end{itemize}
 \end{frame}
 
+%%% DISCUSSION
+\section{Discussion}
+%%% DISCUSSION
+
 \begin{frame} 
 	\frametitle{HOW DOES THIS STORY END??}
 	\begin{itemize}
@@ -729,7 +729,7 @@ Is this evidence that the \emph{cognitive control} is itself resource bound? {Wo
 \begin{frame} 
 	\frametitle{STRATEGIC EFFECT??? (1)}
 	Pro Argument \#1
-	\begin{itemize}
+	\begin{itemize}[<+-| alert@+>]
 		\item The penalty for getting an instruction wrong is much greater for the HiMem condition then the LoMem
 		\item For example, getting instructions ordered wrong could mess up the score for several episodes
 		\item In contrast, the LoMem group only has one instruction, doesn't have to worry about getting them ``messed up''. 
@@ -739,7 +739,7 @@ Is this evidence that the \emph{cognitive control} is itself resource bound? {Wo
 \begin{frame} 
 	\frametitle{STRATEGIC EFFECT??? (2)}
 	Pro Argument \#2
-		\begin{itemize}
+		\begin{itemize}[<+-| alert@+>]
 		\item The greater difficulty of the Turn task for the HiMem group places more pressure on this group. Jitter seems fairly simple and they really do not know what is a good or bad jitter score
 		\item But everyone would agree that keeping a list of three items in memory Is ``easy''
 		\item Hence, forgetting something this ``simple'' leads people in this group to worry more about missing the instruction. Hence they monitor the direction box more and their performance on jitter suffers.
@@ -747,14 +747,24 @@ Is this evidence that the \emph{cognitive control} is itself resource bound? {Wo
 \end{frame}
 
 \begin{frame}
-	\frametitle{CON ARGUMENT}
-	\begin{itemize}
+	\frametitle{RESOURCE EFFECT}
+	\begin{itemize}[<+-| alert@+>]
 		\item ???
-		\item Are resource limitations more reasonable? (Resource theories dominant applied work on cognitive workload and most discussions of basic work on control of cognition -- see \textcite{erik08pr.article} for a counterexception.
+		\item Are resource limitations more reasonable? \emph{(Resource theories dominant applied work on cognitive workload and most discussions of basic work on control of cognition -- see \textcite{erik08pr.article} for a counterexample.)}
 	\end{itemize}
 \end{frame}
 
+\begin{frame}
+	\frametitle{MICROPROCEDURAL EFFECT-- The Functional Resource Hypothesis}
+	\begin{itemize}[<+-| alert@+>]
+		\item We would argue for a modified resource approach; namely, the soft constraints hypothesis
+		\item Basically the job gets done using available resources with nondeliberate (\& nonconscious) tradeoffs being made in the allocation of the \emph{\textcolor{wdgRed}{resource of cognitive control}}
+	\end{itemize}
+\end{frame}
 
+%% SUMMARY
+\section{Summary}
+%% SUMMARY
 
 \againframe{4flaws}
 
@@ -764,9 +774,9 @@ Is this evidence that the \emph{cognitive control} is itself resource bound? {Wo
 		\LARGE{\textcolor{wdgRed}{Thank You!!}}
 	\end{textblock}
 		
-	%\begin{textblock}{5}(10,3)
-	%	\LARGE{\textcolor{wdgRed}{Haben Sie vielen Dank!}}
-	%\end{textblock}
+	\begin{textblock}{5}(10,3)
+		\LARGE{\textcolor{wdgRed}{Haben Sie vielen Dank!}}
+	\end{textblock}
 \end{frame}
 
 \begin{frame}[allowframebreaks]
