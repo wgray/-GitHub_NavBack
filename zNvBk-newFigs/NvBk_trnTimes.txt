@@ -1,0 +1,11 @@
+NvBkCmpltdTrn	
+
+
+Early Start
+Early End
+
+Middle Start	54
+Middle End
+
+Late Start		33
+Late End		35	nose of arrow at center of highway
