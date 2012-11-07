@@ -47,7 +47,7 @@
 % Or whatever. Note that the encoding and the font should match. If T1
 % does not look nice, try deleting the line with the fontenc.
 
-\usepackage[absolute,overlay]{textpos}
+\usepackage[absolute,overlay]{textpos} %% this is the package for \textblock 
 %%%		beamer automatically installs a white background behind everything, unless you install a different background template. Because of this, you must use the overlay option when using textpos, so that it will place boxes in front of everything. Alternatively, you can install an empty background template, but this may result in an incorrect display in certain situtations with older versions of the Acrobat Reader.
 
 
@@ -150,7 +150,7 @@
 % - Keep it simple, no one is interested in your street address.
 
 \date[\today] % (optional, should be abbreviation of conference name)
-{Talk Presented at MPIB ABC on 2012-03Mar-27}
+{Talk Presented at the Central European University on 2012-May-07}
 % - Either use conference name or its abbreviation.
 % - Not really informative to the audience, more for people (including yourself) who are reading the slides online
 
@@ -176,8 +176,19 @@
 \begin{document}
 
 \begin{frame}
- \titlepage
+	\titlepage
+		  \begin{textblock}{3}(.5,13)	
+  		{\includegraphics[scale=.3]{/Users/GrayMatter/Library/texmf/tex/zLogoFigs/CEU_logo}}
+    	   \end{textblock} 
 
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Shorter report on this work will be presented this August in Sapporo}
+	\begin{itemize}
+			\item \fullcite{ralph12csc.paper}
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -202,16 +213,32 @@
 %% motivation				motivation
 \section{Motivation}
 %% motivation				motivation
-\subsection{Orientation}
+\subsection{Orientation: Applied Problems as a Driver of Basic Research}
 
  \begin{frame}
 	\frametitle{ORIENTATION}
-Cognitive workload is a Pasteur's Quadrant \parencite{stokes97} type of problem:
+ Understanding and predicting cognitive workload is an important applied problem the solution of which requires development of basic theory in \emph{control of cognition}
 		\begin{itemize}
-			\item An important applied problem the solution of which requires development of basic theory in control of cognition
+			\item ``Nothing drives basic science better than a good applied problem.'' (Newell \& Card, 1985)  p. 238
+			\item ``There is nothing so useful as a good theory.'' (Lewin, 1951)
 		\end{itemize}
+	\begin{textblock}{9}(1,12)
+		\begin{alertblock}{}
+			\tiny{\fullcitebib{lewin51book,newellcard85}}
+		\end{alertblock}
+	\end{textblock}
 
-	\begin{textblock}{9}(1,13)
+\end{frame}
+
+\begin{frame}
+	\frametitle{THIS IS A PASTEUR'S QUADRANT VISION}
+	\begin{columns}
+	\column{0.3\textwidth}
+		\includegraphics[width=\textwidth]{/Users/GrayMatter/Library/texmf/tex/zFigs/Pasteurs-Quadrant-Stokes}
+	\column{0.7\textwidth}
+		\includegraphics[width=\textwidth]{/Users/GrayMatter/Library/texmf/tex/zFigs/Pasteur}
+	\end{columns}
+	\begin{textblock}{4}(0.5,12.5)
 		\begin{alertblock}{}
 			\tiny{\fullcite{stokes97}}
 		\end{alertblock}
@@ -220,8 +247,7 @@ Cognitive workload is a Pasteur's Quadrant \parencite{stokes97} type of problem:
 \end{frame}
 
  \begin{frame}
-	\frametitle{WHY COGNITIVE WORKLOAD IS IMPORTANT}
-	The need for theory-based applications:
+	\frametitle{WHY SHOULD COGNITIVE SCIENCE CARE ABOUT WORKLOAD?}
 	\begin{itemize}
 		\item Real: Performance decrements due to cognitive overload are real and well documented
 		\item State-of-the-Art is an Art: Going beyond \emph{intuitive} solutions of the occasionally gifted designer will require basic research into the control of cognitive systems
@@ -230,17 +256,18 @@ Cognitive workload is a Pasteur's Quadrant \parencite{stokes97} type of problem:
 \end{frame}
 
  \begin{frame}
-	\frametitle{IS COGNITIVE WORKLOAD AN IMPORTANT ISSUE FOR \emph{FAST \& FRUGAL?}}
-	?? Has there been work done on the robustness of Fast \& Frugal heuristics under\dots
-	\pause
+	\frametitle{A PREDICTIVE THEORY OF COGNITIVE WORKLOAD REQUIRES CONTRIBUTIONS FROM A WIDE-SPAN OF COGNITIVE SCIENCE}
+
 	\begin{itemize}
-		\item Changes in cognitive workload?
-		\item Conditions of physical fatigue?
-		\item Emotional distress?
-		\item Multitasking?
-		\item Interruptions?
-		\item Changes in the cost of information acquisition?
-		\item Sensitivity to changes in the design of interactive systems?
+		\item Join Action
+		\item Embodied Cognition
+		\item Effects of Physical Fatigue and Emotional Distress on cognitive processes
+		\item Multitasking
+		\item Interruptions
+		\item Fast and Frugal Heuristics for Decision Making
+		\item Changes in the cost of information acquisition
+		\item Sensitivity to changes in the design of interactive systems
+		\item Cognitive Neuroscience
 	\end{itemize}
 \end{frame}
 
@@ -277,7 +304,7 @@ Cognitive workload is a Pasteur's Quadrant \parencite{stokes97} type of problem:
 	\end{itemize}
 \end{frame}
 
-\begin{frame}
+\begin{frame}<beamer:0>
 	\frametitle{COGNITIVE APPROACHES TO MENTAL WORKLOAD}
 On the plus side they address the first two complaints; namely,
 	\begin{enumerate}
@@ -312,17 +339,18 @@ Due to their domains, Wicken's MRT has had more to do with complex tasks involvi
 
 \end{frame}
 
-\begin{frame}<beamer:0>
+\begin{frame}   %%<beamer:1>
 	\frametitle{MULTIPLE RESOURCE THEORY}
+	Best known of the cognitive approaches to workload is Wicken's Multiple Resource Theory (MRT)
 	\begin{itemize}
-		\item Visual representation of Christopher Wicken's Multiple Resource Theory. Dual tasks are coded by which sections of the cube the tasks require. When more than one task requires the use of a given resource, the theory predicts a performance decrement.
+		\item Visual representation of MRT Theory. Dual tasks are coded by which sections of the cube the tasks require. When more than one task requires the use of a given resource, the theory predicts a performance decrement.
 	\end{itemize}
 	\begin{center}
-		\includegraphics[width=.75\textwidth]{../zNvBkFigs/wickens-mrt}
+		\includegraphics[width=.65\textwidth]{../zNvBkFigs/wickens-mrt}
 	\end{center}
 \end{frame}
 
-\begin{frame}<beamer:0>
+\begin{frame}  %%<beamer:1>
 	\frametitle{CRITIQUE OF MULTIPLE RESOURCE THEORY}
 On the plus side MRT addresses the first two complaints; namely,
 	\begin{enumerate}
@@ -330,12 +358,13 @@ On the plus side MRT addresses the first two complaints; namely,
 		\item It treats to focus on events that happen with the unit task timeframe (though this focus is not explicit)
 	\pause
   \listpart{However, it doesn't do so well on these:}  %%%courtesy of the expdlist package
+	\pause
 		\item It does not distinguish between body-bound or brain-bound resource limits
 		\item It does not distinguish between resources limits in cognitive control versus the role that control resources play in strategically structuring and interleaving body-bound and other brain-bound resources.
 	\end{enumerate}
 \end{frame}
 
-\begin{frame}
+\begin{frame}<beamer:0>
 	\frametitle{CRITIQUE OF COGNITIVE APPROACHES TO WORKLOAD}
 On the plus side current cognitive approaches address the first two complaints; namely,
 	\begin{enumerate}
@@ -356,12 +385,12 @@ On the plus side current cognitive approaches address the first two complaints; 
 \begin{frame}
 	\frametitle{OUR APPROACH TO COGNITIVE WORKLOAD}
 Our critique:
-	\begin{enumerate}
+	\begin{enumerate}[<+-| alert@+>]
 		\item Current approaches to workload offer an outcome-based not a process-based approach to workload
-	\end{enumerate}
-	\pause
-In contrast, we are:
-	\begin{enumerate}
+	%\pause
+	\listpart{In contrast, we are:}
+		%\pause
+		\setcounter{enumi}{0}
 		\item Grounded in process theories of cognition with a computational modeling emphasis \emph{(However, I won't talk about models today.)}
 	\end{enumerate}
 \end{frame}
@@ -369,13 +398,10 @@ In contrast, we are:
 \begin{frame}
 	\frametitle{OUR APPROACH (2)}
 Our critique:
-	\begin{enumerate}
+	\begin{enumerate}[<+-| alert@+>]
 		\setcounter{enumi}{1}
 		\item Current approaches treat workload as a single construct that applies over the full scope of human behavior
-	\end{enumerate}
-	\pause
-In contrast, we are:
-	\begin{enumerate}
+	\listpart{In contrast, we are:}
 		\setcounter{enumi}{1}
 		\item Focused on immediate, interactive behavior and the cognitive-perceptual-motor phenomenon that emerge around the 1/3 to 3s level of analysis \emph{(i.e., microprocedures)}
 		\begin{itemize}
@@ -388,13 +414,10 @@ In contrast, we are:
 \begin{frame}
 	\frametitle{OUR APPROACH (3)}
 Our critique:
-	\begin{enumerate}
+	\begin{enumerate}[<+-| alert@+>]
 		\setcounter{enumi}{2}
 		\item Current approaches do not distinguish between body-bound or brain-bound resource limits
-	\end{enumerate}
-\pause
-Our approach: 
-	\begin{enumerate}
+	\listpart{Our approach: }
 		\setcounter{enumi}{2}
 		\item Broadly congruent with discussions of embodied cognition \parencite{clark08,rupert10,km97} as those discussions concern immediate interactive behavior
 	\end{enumerate}
@@ -403,16 +426,14 @@ Our approach:
 \begin{frame}
 	\frametitle{OUR APPROACH (4)}
 Our critique:
-	\begin{enumerate}
+	\begin{enumerate}[<+-| alert@+>]
 		\setcounter{enumi}{3}
 		\item Current approaches do not distinguish between \textcolor{darkgreen}{resources limits} in cognitive control versus the role that \textcolor{wdgRed}{control resources play} in \textcolor{wdgRed}{strategically structuring and interleaving} other resources.
-	\end{enumerate}
-\pause
-Our approach: 
-	\begin{enumerate}
+	\listpart{Our approach:}
 		\setcounter{enumi}{3}
 		\item \alert{Milliseconds Matter!} We build on our prior work with the \emph{Soft Constraints Hypothesis} \parencite{gray06pr} which shows shifts in \emph{microprocedures} which reflect local optimization of effort
 	\end{enumerate}
+\pause
 	\begin{itemize}
 			\item In the work presented today we will be open-minded about whether our data show \alert{resource limits} or \alert{shifts in microprocedures} due to local optimization of efficiencies - as per the \emph{soft constraints hypothesis}.
 		\end{itemize}
@@ -422,21 +443,15 @@ Our approach:
 \begin{frame}
 	%\renewcommand{\labelenumi}{\Alph{enumi}}
 	\frametitle{CONTROL OF COGNITION}
-	\begin{itemize}
-		\item A complete theory of cognitive workload must consider: 
-		\begin{enumerate}[\Alph{enumi}]
+		A complete theory of cognitive workload must consider: 
+		\begin{enumerate}[<+-| alert@+>]
 			\item Body-bound resources which enable us to interact with and gain information from the world
 			\item Brain-bound resources that process visual information, produce motor plans, retrieve information from memory, and so on
-		\end{enumerate}
-		\pause
-		\item In addition, cognitive control is itself a resource that is limited and a complete theory of cognitive workload must consider
-		\begin{enumerate}[\Alph{enumi}]
-			\setcounter{enumi}{2}
+		\listpart{In addition, cognitive control is itself a resource that is limited and a complete theory of cognitive workload must consider:}
 			\item Processing limits and resources constraints inherent to the cognitive controller
 		\end{enumerate}
 		\pause
-		\item While we do not yet have a \emph{complete theory}, we refer to our work on cognitive workload as the \emph{Functional Resource Framework}
-	\end{itemize}
+		While we do not yet have a \emph{complete theory}, we refer to our work on cognitive workload as the \emph{Functional Resource Framework}
 
 \end{frame}
 
@@ -567,7 +582,7 @@ Our approach:
 	Lower scores are better!
 	\begin{figure}
 		\centering
-		\includegraphics[width=.9\textwidth]{../zNvBkFigs/Rplot-e1jit41-best-110730}
+		\includegraphics[width=1\textwidth]{../zNvBkFigs/Rplot-e1jit41-best-110730}
 	\end{figure}
 \end{frame}
 
@@ -617,7 +632,7 @@ Is this evidence that the \emph{\textcolor{red}{cognitive control is itself reso
 	\begin{itemize}
 		\item Part of a longer study with 6 conditions
 		\begin{itemize}
-			\item Only two of the conditions will be discussed today
+			\item Will focus on two of the conditions today but will mention the other four towards the end
 		\end{itemize}
 		\item High vs Low Memory Load 
 		\begin{itemize}
@@ -699,9 +714,38 @@ Is this evidence that the \emph{\textcolor{red}{cognitive control is itself reso
 \begin{frame} 
 	\frametitle{E2 RESULTS: LoMem vs HiMem Differences in Fixations Dispersion}
 	  \begin{textblock}{5.5}(3,2)	
-  		\includegraphics[scale=.45]{../zNvBkFigs/Rplot_hexbinplot_db_hl}
+  		\includegraphics[scale=.45]{../zNvBkFigs/Rplot_r7_hexbinplot_db}
     	  \end{textblock} 
 \end{frame}
+
+\begin{frame}
+	\frametitle{E2 had 6 conditions, not just 2}
+	Varied presentation modality used to present the \emph{turn direction}
+	\begin{itemize}
+		\item Visually in the DIRECTION BOX
+		\item Visually in the ARROW itself 
+		\item AUDITORILY
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame} %[shrink=2]
+	\frametitle{ACROSS ALL MODALITY CONDITIONS WE FOUND}
+	\vspace{-1cm}
+	\begin{figure}
+		\centering
+  		\includegraphics[scale=.5]{../zNvBkFigs/Rplot-wkld_by_blk-g128-noHdr}
+	\end{figure}
+	\begin{textblock}{10}(4,9.5)
+		{\tiny{\begin{itemize}
+			\item The effect of memory load on the variability of the point-of-gaze does \alert{not} interact with MODALITY (p = 0.8460)
+			\item We interpret this as a lack of control over point-of-gaze as workload increases
+		\end{itemize}}}
+    	\end{textblock} 
+
+
+\end{frame}
+
 
 
 \begin{frame} 
@@ -775,7 +819,7 @@ Is this evidence that the \emph{\textcolor{red}{cognitive control is itself reso
 	\end{textblock}
 		
 	\begin{textblock}{5}(10,3)
-		\LARGE{\textcolor{wdgRed}{Haben Sie vielen Dank!}}
+		\LARGE{\textcolor{wdgRed}{K\"osz\"on\"om!}}
 	\end{textblock}
 \end{frame}
 
